@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shivam Art</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#faf9f7;
+    color:#171717;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    padding:16px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.instagram{
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+    padding:45px 20px 35px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    color:#666;
+    font-size:15px;
+    line-height:1.5;
+}
+
+.shop-button{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 25px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+/* SHOP */
+
+.shop{
+    max-width:1050px;
+    margin:auto;
+    padding:20px 16px 50px;
+}
+
+.shop-title{
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+/* PRODUCTS */
+
+.gallery{
+    display:grid;
+    grid-template-columns:
+        repeat(2,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+.card img{
+    width:100%;
+    aspect-ratio:1/1.2;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:13px;
+}
+
+.card h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.price{
+    font-size:17px;
+    font-weight:bold;
+    margin:5px 0 10px;
+}
+
+.order{
+    width:100%;
+    border:none;
+    background:#111;
+    color:white;
+    padding:11px 5px;
+    border-radius:7px;
+    font-size:13px;
+}
+
+/* ABOUT */
+
+.about{
+    max-width:700px;
+    margin:10px auto 50px;
+    padding:25px 20px;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:10px;
+}
+
+.about p{
+    color:#666;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    color:#aaa;
+    margin-top:7px;
+    font-size:13px;
+}
+
+/* DESKTOP */
+
+@media(min-width:700px){
+
+    .gallery{
+        grid-template-columns:
+            repeat(4,1fr);
+        gap:22px;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        Shivam Art
+    </div>
+
+    <!-- Change this to your Instagram -->
+    <a
+        class="instagram"
+        href="https://instagram.com/"
+        target="_blank">
+
+        Instagram
+
+    </a>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>
+        Handmade Art.
+    </h1>
+
+    <p>
+        Original drawings made with care.
+        <br>
+        Small collection • Limited pieces
+    </p>
+
+    <a
+        href="#shop"
+        class="shop-button">
+
+        View Artwork
+
+    </a>
+
+</section>
+
+
+<section
+    class="shop"
+    id="shop">
+
+    <h2 class="shop-title">
+        Available Artwork
+    </h2>
+
+    <div
+        class="gallery"
+        id="gallery">
+    </div>
+
+</section>
+
+
+<section class="about">
+
+    <h2>
+        About Shivam Art
+    </h2>
+
+    <p>
+        I create original handmade artwork
+        inspired by quiet places, nature,
+        memories and everyday moments.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <h3>
+        Shivam Art
+    </h3>
+
+    <p>
+        Handmade • Original • Limited
+    </p>
+
+</footer>
+
+
+<script>
+
+
+/* ===========================
+   YOUR WHATSAPP NUMBER
+=========================== */
+
+const WHATSAPP_NUMBER =
+"91XXXXXXXXXX";
+
+
+/* ===========================
+   YOUR ARTWORKS
+=========================== */
+
+const artworks = [
+
+    {
+        image:"art1.jpg",
+        name:"Rainy Evening",
+        price:"200"
+    },
+
+    {
+        image:"art2.jpg",
+        name:"Moonlit Village",
+        price:"200"
+    },
+
+    {
+        image:"art3.jpg",
+        name:"The Old Street",
+        price:"200"
+    },
+
+    {
+        image:"art4.jpg",
+        name:"Under The Streetlight",
+        price:"200"
+    },
+
+    {
+        image:"art5.jpg",
+        name:"Quiet Night",
+        price:"200"
+    },
+
+    {
+        image:"art6.jpg",
+        name:"Japanese Morning",
+        price:"200"
+    },
+
+    {
+        image:"art7.jpg",
+        name:"Window & Rain",
+        price:"200"
+    },
+
+    {
+        image:"art8.jpg",
+        name:"The Empty Road",
+        price:"200"
+    },
+
+    {
+        image:"art9.jpg",
+        name:"Moon & Trees",
+        price:"200"
+    },
+
+    {
+        image:"art10.jpg",
+        name:"Last Light",
+        price:"200"
+    }
+
+];
+
+
+/* ===========================
+   SHOW PRODUCTS
+=========================== */
+
+const gallery =
+document.getElementById("gallery");
+
+
+artworks.forEach((art,index)=>{
+
+    const card =
+    document.createElement("div");
+
+    card.className="card";
+
+
+    card.innerHTML=`
+
+        <img
+            src="images/${art.image}"
+            alt="${art.name}"
+        >
+
+        <div class="card-content">
+
+            <h3>
+                ${art.name}
+            </h3>
+
+            <div class="price">
+                ₹${art.price}
+            </div>
+
+            <button
+                class="order"
+                onclick="orderArtwork(${index})">
+
+                Order on WhatsApp
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    gallery.appendChild(card);
+
+});
+
+
+/* ===========================
+   WHATSAPP ORDER
+=========================== */
+
+function orderArtwork(index){
+
+    const art =
+    artworks[index];
+
+
+    const message =
+`Hello! I am interested in this artwork.
+
+Artwork: ${art.name}
+
+Price: ₹${art.price}
+
+Is it available?`;
+
+
+    const url =
+    "https://wa.me/" +
+    WHATSAPP_NUMBER +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+    window.open(url,"_blank");
+
+}
+
+</script>
+
+
+</body>
+</html>
